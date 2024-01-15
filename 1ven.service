@@ -1,0 +1,14 @@
+[Unit]
+Description=1ven
+After=network.target
+
+[Service]
+User=str
+Group=str
+
+WorkingDirectory=/home/str/1ven/
+Environment="PYTHONPATH=/home/str/1ven/"
+ExecStart=/home/str/1ven/.venv/bin/python /home/str/1ven/bot.py
+
+[Install]
+WantedBy=multi-user.target
